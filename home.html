@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 min-h-screen">
+    <!-- Navigation Bar -->
+    <header class="bg-white shadow-md py-4">
+        <div class="container mx-auto flex justify-between items-center px-4">
+            <h1 class="text-2xl font-bold">Welcome</h1>
+            <nav>
+                <ul class="flex space-x-6">
+                    <li><a href="#" class="text-gray-700 hover:text-blue-500 font-semibold transition">HOME</a></li>
+                    <li><a href="#" class="text-gray-700 hover:text-blue-500 font-semibold transition">RIDES</a></li>
+                    <li><a href="#" class="text-gray-700 hover:text-blue-500 font-semibold transition">ACCOMMODATIONS</a></li>
+                    <li><a href="#" class="text-gray-700 hover:text-blue-500 font-semibold transition">MARKETPLACE</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto mt-10 px-4">
+        <div class="text-center">
+            <h2 class="text-3xl font-bold mb-4">Welcome to Your Dashboard</h2>
+            <p class="text-gray-600 mb-6">Explore rides, accommodations, and the marketplace to make your life easier.</p>
+            <button class="px-6 py-3 bg-black text-white rounded-lg font-bold transition-transform duration-200 hover:bg-gray-800 hover:scale-95 focus:ring-2 focus:ring-blue-500">
+                Get Started
+            </button>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white shadow-inner mt-10 py-4">
+        <div class="container mx-auto text-center text-gray-600">
+            <p>&copy; 2025 Your Website. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelectorAll('button').forEach(button => {
+            button.addEventListener('click', (event) => {
+                event.target.classList.add('animate-pulse');
+                setTimeout(() => event.target.classList.remove('animate-pulse'), 200);
+            });
+        });
+    </script>
+</body>
+</html>
